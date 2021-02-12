@@ -32,9 +32,20 @@ CLASS zcl_119038_demo_0201 IMPLEMENTATION.
   connection-airport_to_id = 'JFK'.
 
 
+  out->write( |Kürzel der Gluggesellschaft: { connection-carrier_id }| ).
+  out->write( |Verbindungsnummer { connection-connection_id }| ).
 
+  "Kopieren
+  Data  flight type  z119038_flight.
+  flight-carrier_id = 'LH'.
+  flight-connection_id = '0400'.
+  flight-flight_date = cl_abap_context_info=>get_system_date(  ).
+  flight-price = 500.
+  flight-currency_code = 'EUR'.
+  flight-plane_type_id = 'A340-400'.
 
-
+    DATA flight_xt Type Z119038_FLIGHT_EXTENDED.
+    flight_xt = connection.
 
 
 
