@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_119038_demo_0201 IMPLEMENTATION.
+CLASS ZCL_119038_DEMO_0201 IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
@@ -45,7 +45,9 @@ CLASS zcl_119038_demo_0201 IMPLEMENTATION.
   flight-plane_type_id = 'A340-400'.
 
     DATA flight_xt Type Z119038_FLIGHT_EXTENDED.
-    flight_xt = connection.
+    flight_xt = CORRESPONDING #( connection ).
+    flight_xt = CORRESPONDING #( base  (  flight_xt ) flight ).
+
 
 
 
