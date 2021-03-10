@@ -1,0 +1,53 @@
+@UI.headerInfo:{
+    typeName: 'Flight',
+    typeNamePlural: 'Flights'
+}
+@Metadata.layer: #CORE
+annotate view ZI_119038_Annotations with
+{
+  @UI.facet: [{ type: #IDENTIFICATION_REFERENCE, label: 'General Information' }]
+  @UI:{
+      selectionField:  [{ position: 10 }],
+      lineItem: [{ position: 10 }],
+      identification: [{ position: 10 }]
+  }
+  CarrierId;
+  @UI:{
+     selectionField:  [{ position: 10 }],
+     lineItem: [{ position: 10 }],
+     identification: [{ position: 10 }]
+  }
+  ConnectionId;
+
+  @UI:{
+      selectionField:  [{ position: 10 }],
+      lineItem: [{ position: 10 }],
+      identification: [{ position: 10 }]
+  }
+  FlightDate;
+
+  @UI:{
+      selectionField:  [{ position: 10 }],
+      lineItem: [{ position: 10 }],
+      identification: [{ position: 10 }]
+  }
+  Price;
+  @UI.hidden: true
+
+  CurrencyCode;
+  @UI:{
+      selectionField:  [{ position: 10 }],
+      lineItem: [{ position: 10 }],
+      identification: [{ position: 10 }]
+  }
+  PlaneTypeId;
+  @UI:{
+    identification: [{ position: 60 }]
+  }
+  SeatsMax;
+  @UI:{
+    identification: [{ position: 70 }]
+  }
+  SeatsOccupied;
+
+}
